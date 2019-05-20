@@ -23,6 +23,15 @@ public class Login implements Initializable {
     @FXML
     PasswordField pass;
 
+    Stage login;
+
+    public Stage getLogin() {
+        return login;
+    }
+
+    public void setLogin(Stage login) {
+        this.login = login;
+    }
 
     @FXML
     public void accion(ActionEvent evt){
@@ -36,6 +45,7 @@ public class Login implements Initializable {
                 Stage pricipal= new Stage();
                 pricipal.setScene(scena);
                 pricipal.show();
+                getLogin().hide();
             }catch (IOException e){
                 e.printStackTrace();
             }

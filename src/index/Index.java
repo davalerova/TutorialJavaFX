@@ -13,10 +13,12 @@ public class Index extends Application {
     public void start(Stage primaryStage) throws Exception {
         Vistas vista =new Vistas();
         FXMLLoader fxml=vista.vista("Login");
-        fxml.setController(new Login());
+        Login logi=new Login();
+        fxml.setController(logi);
         Parent root=(Parent)fxml.load();
         Scene scena=new Scene(root);
         primaryStage.setScene(scena);
+        logi.setLogin(primaryStage);
         primaryStage.show();
     }
     public static void main (String arg[]){
