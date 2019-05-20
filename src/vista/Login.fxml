@@ -5,11 +5,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="183.0" prefWidth="443.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField layoutX="93.0" layoutY="37.0" prefHeight="25.0" prefWidth="257.0" />
-      <PasswordField layoutX="93.0" layoutY="81.0" prefHeight="25.0" prefWidth="257.0" />
-      <Button layoutX="93.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="257.0" text="Button" />
+      <TextField fx:id="user" layoutX="93.0" layoutY="37.0" prefHeight="25.0" prefWidth="257.0" promptText="Usuario" />
+      <PasswordField fx:id="pass" layoutX="93.0" layoutY="81.0" prefHeight="25.0" prefWidth="257.0" promptText="Contraseña" />
+      <Button layoutX="93.0" layoutY="121.0" mnemonicParsing="false" onAction="#accion" prefHeight="25.0" prefWidth="257.0" text="Ingresar" />
    </children>
 </Pane>
