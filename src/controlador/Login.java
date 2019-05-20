@@ -38,12 +38,14 @@ public class Login implements Initializable {
         if(user.getText().equals("daval")&&pass.getText().equals("daval")){
             Vistas vista=new Vistas();
             FXMLLoader princi=vista.vista("Principal");
-            princi.setController(new Principal());
+            Principal princ=new Principal();
+            princi.setController(princ);
             try {
                 Parent root=(Parent)princi.load();
                 Scene scena=new Scene(root);
                 Stage pricipal= new Stage();
                 pricipal.setScene(scena);
+                princ.setPrincipal(pricipal);
                 pricipal.show();
                 getLogin().hide();
             }catch (IOException e){
